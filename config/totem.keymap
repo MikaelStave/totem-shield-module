@@ -20,8 +20,8 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define TVP1 4
-#define TVP2 5
+#define MOUSE 3
+#define GAME 4
 
 &mt {
     quick-tap-ms = <100>;
@@ -224,7 +224,7 @@
             label = "gaming";
             bindings = <
          &lt 1 ESC       &kp Q  &kp W      &kp E           &kp R        &kp Y          &kp U        &kp I         &kp O       &kp P
-         &kp LEFT_SHIFT  &kp S  &kp S      &kp D           &kp F        &kp H          &kp J        &kp K         &kp L       &kp NB_O_SLASH
+         &kp LEFT_SHIFT  &kp A  &kp S      &kp D           &kp F        &kp H          &kp J        &kp K         &kp L       &kp NB_O_SLASH
 &kp TAB  &kp LCTRL       &kp Z  &kp X      &kp C           &kp V        &kp N          &kp M        &kp NB_COMMA  &kp NB_DOT  &kp FSLH        &to 0
                                 &kp LCTRL  &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &lt 2 ENTER  &mo 0
             >;
