@@ -21,22 +21,16 @@
     indicators {
         compatible = "zmk,indicator-leds";
 
-        /* Red LED near USB: solid when NOT connected to host */
+        /* Red LED (D6): solid when NOT connected to host */
         scroll_lock_indicator: scroll_lock {
             indicator = <HID_INDICATOR_SCROLL_LOCK>;
             leds = <&led0>;
         };
 
-        /* Green LED near USB: solid when connected to host */
+        /* Green LED (D7): solid when connected to host */
         caps_lock_indicator: caps_lock {
             indicator = <HID_INDICATOR_CAPS_LOCK>;
             leds = <&led1>;
-        };
-
-        /* Blue LED near USB: on when Num Lock is active */
-        num_lock_indicator: num_lock {
-            indicator = <HID_INDICATOR_NUM_LOCK>;
-            leds = <&led2>;
         };
     };
 };
@@ -51,13 +45,6 @@
 &caps_lock_indicator {
     active-brightness = <100>;
     inactive-brightness = <100>;
-    disconnected-brightness = <0>;
-    on-while-idle;
-};
-
-&num_lock_indicator {
-    active-brightness = <100>;
-    inactive-brightness = <0>;
     disconnected-brightness = <0>;
     on-while-idle;
 };
