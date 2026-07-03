@@ -5,7 +5,6 @@
  */
 
 #include "totem.dtsi"
-#include <dt-bindings/zmk/hid_indicators.h>
 
 &kscan0 {
     col-gpios
@@ -16,36 +15,3 @@
         , <&xiao_d 8 GPIO_ACTIVE_HIGH>
         ;
 };
-
-/ {
-    indicators {
-        compatible = "zmk,indicator-leds";
-
-        /* Red LED (D6): solid when NOT connected to host */
-        scroll_lock_indicator: scroll_lock {
-            indicator = <HID_INDICATOR_SCROLL_LOCK>;
-            leds = <&led0>;
-        };
-
-        /* Green LED (D7): solid when connected to host */
-        caps_lock_indicator: caps_lock {
-            indicator = <HID_INDICATOR_CAPS_LOCK>;
-            leds = <&led1>;
-        };
-    };
-};
-
-&scroll_lock_indicator {
-    active-brightness = <0>;
-    inactive-brightness = <0>;
-    disconnected-brightness = <100>;
-    on-while-idle;
-};
-
-&caps_lock_indicator {
-    active-brightness = <100>;
-    inactive-brightness = <100>;
-    disconnected-brightness = <0>;
-    on-while-idle;
-};
-
