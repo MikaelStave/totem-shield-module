@@ -28,6 +28,22 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bt_next {
+            timeout-ms = <50>;
+            key-positions = <32 35>;
+            bindings = <&bt BT_NXT>;
+        };
+
+        combo_bt_clear {
+            timeout-ms = <50>;
+            key-positions = <31 36>;
+            bindings = <&bt BT_CLR>;
+        };
+    };
+
     behaviors {
        /*
         *

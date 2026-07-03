@@ -24,5 +24,7 @@ include:
     snippet: zmk-usb-logging
   - board: xiao_ble//zmk
     shield: totem_right
+    snippet: zmk-usb-logging
   - board: xiao_ble//zmk
     shield: settings_reset
+    snippet: zmk-usb-logging
